@@ -1,0 +1,8 @@
+node_modules
+nodejs
+.build
+.serverless
+.env
+.esbuild
+common-libs.zip
+common

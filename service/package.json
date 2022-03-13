@@ -1,0 +1,25 @@
+{
+  "name": "service",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "serverless offline",
+    "deploy": "serverless deploy"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.93",
+    "@types/randomstring": "^1.1.8",
+    "common": "file:../shared-layer/nodejs/node_modules/common",
+    "esbuild": "^0.14.25",
+    "randomstring": "^1.2.2",
+    "serverless": "^3.7.4",
+    "serverless-esbuild": "^1.25.0",
+    "serverless-latest-layer-version": "^2.1.1",
+    "serverless-offline": "^8.5.0",
+    "typescript": "^4.6.2"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

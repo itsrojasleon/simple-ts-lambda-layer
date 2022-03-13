@@ -1,0 +1,30 @@
+{
+  "name": "shared-layer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./common/index.js",
+  "types": "./common/index.d.ts",
+  "files": [
+    "common/**/*"
+  ],
+  "scripts": {
+    "clean": "rm -rf nodejs",
+    "compile": "tsc",
+    "init": "cd common && npm init -y",
+    "build:prev": "npm install && npm run clean && npm run compile && npm run init",
+    "build:post": "mkdir nodejs && cp -R common node_modules/ && cp -R node_modules nodejs/ && zip -r common-libs.zip nodejs",
+    "build": "npm run build:prev && npm run build:post",
+    "deploy": "npm run build && serverless deploy"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/aws-lambda": "^8.10.93",
+    "randomstring": "^1.2.2"
+  },
+  "devDependencies": {
+    "serverless": "^3.7.4",
+    "typescript": "^4.6.2"
+  }
+}

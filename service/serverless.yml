@@ -1,0 +1,37 @@
+service: service
+
+useDotenv: true
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+  stage: ${opt:stage, 'dev'}
+  layers:
+    - arn:aws:lambda:${env:AWS_REGION}:${env:AWS_ACCOUNT_ID}:layer:common:latest
+
+functions:
+  hello:
+    handler: src/lambdas/hello.handler
+    events:
+      - http:
+          path: /hello
+          method: GET
+  world:
+    handler: src/lambdas/world.handler
+    events:
+      - http:
+          path: /world
+          method: POST
+
+custom:
+  esbuild:
+    bundle: true
+    minify: false
+    exclude:
+      - common
+      - randomstring
+
+plugins:
+  - serverless-esbuild
+  - serverless-offline
+  - serverless-latest-layer-version
