@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "serverless offline",
-    "deploy": "serverless deploy"
+    "deploy": "serverless deploy",
+    "remove": "serverless remove"
   },
   "devDependencies": {
     "@types/aws-lambda": "^8.10.93",

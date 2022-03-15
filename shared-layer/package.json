@@ -14,7 +14,8 @@
     "build:prev": "npm install && npm run clean && npm run compile && npm run init",
     "build:post": "mkdir nodejs && cp -R common node_modules/ && cp -R node_modules nodejs/ && zip -r common-libs.zip nodejs",
     "build": "npm run build:prev && npm run build:post",
-    "deploy": "npm run build && serverless deploy"
+    "deploy": "npm run build && serverless deploy",
+    "remove": "serverless remove"
   },
   "keywords": [],
   "author": "",
