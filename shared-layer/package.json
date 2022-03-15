@@ -11,9 +11,7 @@
     "clean": "rm -rf nodejs",
     "compile": "tsc",
     "init": "cd common && npm init -y",
-    "build:prev": "npm install && npm run clean && npm run compile && npm run init",
-    "build:post": "mkdir nodejs && cp -R common node_modules/ && cp -R node_modules nodejs/ && zip -r common-libs.zip nodejs",
-    "build": "npm run build:prev && npm run build:post",
+    "build": "npm install && npm run clean && npm run compile && npm run init && mkdir nodejs && cp -R common node_modules/ && cp -R node_modules nodejs/ && zip -r common-libs.zip nodejs",
     "deploy": "npm run build && serverless deploy",
     "remove": "serverless remove"
   },
