@@ -5,11 +5,6 @@ export enum StatusCodes {
   StatusCreated = 201
 }
 
-/**
- * Generic lambda response
- * @param statusCode HTTP method
- * @param msg Message could be any javascript data structure
- */
 export const lambdaResponse = (
   statusCode: StatusCodes,
   msg: any
@@ -17,5 +12,14 @@ export const lambdaResponse = (
   return {
     statusCode,
     body: JSON.stringify(msg)
+  };
+};
+
+export const getStoredEnvVariables = () => {
+  return {
+    CUSTOM_ENV_ONE:
+      process.env.CUSTOM_ENV_ONE || 'it does not work for CUSTOM_ENV_ONE',
+    CUSTOM_ENV_TWO:
+      process.env.CUSTOM_ENV_TWO || 'it does not work for CUSTOM_ENV_TWO'
   };
 };

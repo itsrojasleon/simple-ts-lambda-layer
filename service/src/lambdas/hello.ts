@@ -1,10 +1,10 @@
 import { APIGatewayProxyHandler } from 'aws-lambda';
-import { StatusCodes, lambdaResponse } from 'common';
 import { generate } from 'randomstring';
+import { StatusCodes, lambdaResponse, getStoredEnvVariables } from 'common';
 
 export const handler: APIGatewayProxyHandler = async () => {
-  return lambdaResponse(
-    StatusCodes.StatusOK,
-    `HELLO! Here's your random message: ${generate()}`
-  );
+  const { CUSTOM_ENV_ONE, CUSTOM_ENV_TWO } = getStoredEnvVariables();
+  const response = `Random message: ${generate()}, env vars: ${CUSTOM_ENV_ONE} ${CUSTOM_ENV_TWO}`;
+
+  return lambdaResponse(StatusCodes.StatusOK, response);
 };
