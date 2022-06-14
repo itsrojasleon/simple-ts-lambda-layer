@@ -2,11 +2,6 @@ service: shared-layer
 
 provider:
   name: aws
-  # It doesn't work
-  environment:
-    CUSTOM_ENV_ONE: hello-there-everyone
-    CUSTOM_ENV_TWO:
-      Fn::ImportValue: hehehe # This value really existed
 
 layers:
   common:

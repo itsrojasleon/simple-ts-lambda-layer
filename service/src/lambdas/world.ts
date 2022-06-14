@@ -1,10 +1,9 @@
 import { APIGatewayProxyHandler } from 'aws-lambda';
-import { StatusCodes, lambdaResponse } from 'common';
+import { lambdaResponse, StatusCodes } from 'common';
 import { generate } from 'randomstring';
 
 export const handler: APIGatewayProxyHandler = async () => {
-  return lambdaResponse(
-    StatusCodes.StatusCreated,
-    `World! You've just created a random message: ${generate()}`
-  );
+  return lambdaResponse(StatusCodes.StatusCreated, {
+    msg: `World! You've just created a random message: ${generate()}`
+  });
 };

@@ -6,4 +6,6 @@ nodejs
 .esbuild
 common-libs.zip
 common
+local.zip
+local
 .DS_Store

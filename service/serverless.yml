@@ -6,6 +6,8 @@ provider:
   name: aws
   runtime: nodejs14.x
   stage: ${opt:stage, 'dev'}
+  environment:
+    CUSTOM_ENV_ONE: thisIsCustomEnvOne
   layers:
     - arn:aws:lambda:${env:AWS_REGION}:${env:AWS_ACCOUNT_ID}:layer:common:latest
 
@@ -30,6 +32,7 @@ custom:
     exclude:
       - common
       - randomstring
+      - /opt/nodejs
 
 plugins:
   - serverless-esbuild
