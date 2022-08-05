@@ -19,6 +19,12 @@ custom:
   esbuild:
     bundle: true
     minify: false
+    exclude:
+      # We need to include the common-layer code because it is referencing it directly
+      # when we're in development.
+      # - common-layer
+      # We can exclude this package since it's installed locally in our project.
+      - randomstring
 
 plugins:
   - serverless-esbuild

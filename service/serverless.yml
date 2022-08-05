@@ -21,6 +21,8 @@ custom:
   esbuild:
     bundle: true
     minify: false
+    # These packages will be available within the layers, there's no need
+    # to include it within our lambda bundled code.
     exclude:
       - common-layer
       - randomstring

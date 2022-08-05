@@ -18,10 +18,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@types/aws-lambda": "^8.10.93",
     "randomstring": "^1.2.2"
   },
   "devDependencies": {
+    "@types/aws-lambda": "^8.10.93",
     "serverless": "^3.7.4",
     "typescript": "^4.6.2"
   }
