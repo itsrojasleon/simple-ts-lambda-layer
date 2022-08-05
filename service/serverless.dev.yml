@@ -6,8 +6,6 @@ provider:
   name: aws
   runtime: nodejs16.x
   stage: ${opt:stage, 'dev'}
-  layers:
-    - arn:aws:lambda:${env:AWS_REGION}:${env:AWS_ACCOUNT_ID}:layer:common:latest
 
 functions:
   hello:
@@ -21,6 +19,9 @@ custom:
   esbuild:
     bundle: true
     minify: false
+    exclude:
+      - common
+      - randomstring
 
 plugins:
   - serverless-esbuild

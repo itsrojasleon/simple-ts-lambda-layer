@@ -4,16 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "serverless offline",
+    "dev": "serverless offline start --config serverless.dev.yml",
     "deploy": "serverless deploy",
     "remove": "serverless remove"
   },
   "devDependencies": {
     "@types/aws-lambda": "^8.10.93",
     "@types/randomstring": "^1.1.8",
-    "common": "file:../shared-layer/nodejs/node_modules/common",
     "esbuild": "^0.14.25",
-    "local": "file:layer/nodejs/node_modules/local",
     "randomstring": "^1.2.2",
     "serverless": "^3.7.4",
     "serverless-esbuild": "^1.25.0",

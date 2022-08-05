@@ -8,10 +8,9 @@
     "common/**/*"
   ],
   "scripts": {
-    "clean": "rm -rf nodejs",
-    "compile": "tsc",
-    "init": "cd common && npm init -y",
-    "build": "npm install && npm run clean && npm run compile && npm run init && mkdir nodejs && cp -R common node_modules/ && cp -R node_modules nodejs/ && zip -r common-libs.zip nodejs",
+    "prebuild": "rm -rf nodejs && rm -rf common-layer && tsc && mkdir nodejs && cp package.json nodejs && cd nodejs; npm install --prod && mkdir -p node_modules",
+    "build": "cp -R common-layer nodejs/node_modules && cd nodejs/node_modules/common-layer; npm init -y",
+    "postbuild": "zip -r compressed-common-layer-code.zip nodejs",
     "deploy": "npm run build && serverless deploy",
     "remove": "serverless remove"
   },

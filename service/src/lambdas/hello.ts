@@ -1,13 +1,16 @@
 import { APIGatewayProxyHandler } from 'aws-lambda';
-import { getStoredEnvVariables, lambdaResponse, StatusCodes } from 'common';
-import { generate } from 'randomstring';
+import {
+  lambdaResponse,
+  programmingLanguages,
+  StatusCodes
+} from 'common-layer';
+// This package will be available once we're in aws because it is installed within
+// the common layer. Make sure to install it if we're in development as a dev dependency.
+import randomstring from 'randomstring';
 
 export const handler: APIGatewayProxyHandler = async () => {
-  const { CUSTOM_ENV_ONE, CUSTOM_ENV_TWO } = getStoredEnvVariables();
-
   return lambdaResponse(StatusCodes.StatusOK, {
-    msg: `Random message: ${generate()}`,
-    env1: `${CUSTOM_ENV_ONE}`,
-    env2: `${CUSTOM_ENV_TWO}`
+    programmingLanguages: programmingLanguages.join(', '),
+    randomstring: randomstring.generate()
   });
 };
