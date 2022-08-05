@@ -19,9 +19,6 @@ custom:
   esbuild:
     bundle: true
     minify: false
-    exclude:
-      - common
-      - randomstring
 
 plugins:
   - serverless-esbuild
