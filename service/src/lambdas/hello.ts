@@ -10,7 +10,7 @@ import randomstring from 'randomstring';
 
 export const handler: APIGatewayProxyHandler = async () => {
   return lambdaResponse(StatusCodes.StatusOK, {
-    programmingLanguages: programmingLanguages.join(', '),
+    programmingLanguages,
     randomstring: randomstring.generate()
   });
 };

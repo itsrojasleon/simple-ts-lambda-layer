@@ -6,7 +6,7 @@
     "paths": {
       "common-layer": [
         "../common-layer/src/index.ts"
-      ],
+      ]
     },
     "forceConsistentCasingInFileNames": true,
     "strict": true,

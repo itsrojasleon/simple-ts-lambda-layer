@@ -1,16 +1,16 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@types/aws-lambda': ^8.10.93
+  '@types/aws-lambda': ^8.10.101
   randomstring: ^1.2.2
   serverless: ^3.7.4
   typescript: ^4.6.2
 
 dependencies:
-  '@types/aws-lambda': 8.10.101
   randomstring: 1.2.2
 
 devDependencies:
+  '@types/aws-lambda': 8.10.101
   serverless: 3.21.0
   typescript: 4.7.4
 
@@ -179,7 +179,7 @@ packages:
 
   /@types/aws-lambda/8.10.101:
     resolution: {integrity: sha512-84geGyVc0H9P9aGbcg/vkDh5akJq0bEf3tizHNR2d1gcm0wsp9IZ/SW6rPxvgjJFi3OeVxDc8WTKCAjoZbogzg==}
-    dev: false
+    dev: true
 
   /@types/cacheable-request/6.0.2:
     resolution: {integrity: sha512-B3xVo+dlKM6nnKTcmm5ZtY/OL8bOAOd2Olee9M1zft65ox50OzjEHW91sDiU9j6cvW8Ejg1/Qkf4xd2kugApUA==}

@@ -24,7 +24,13 @@ cd service && npm run dev
 
 ## Run tests
 
-TODO
+```shell
+# If using pnpm
+cd service && pnpm run test
+
+# If using npm
+cd service && npm run test
+```
 
 ## Getting ready for production
 
