@@ -6,6 +6,6 @@ provider:
 layers:
   common:
     compatibleRuntimes:
-      - 'nodejs14.x'
+      - 'nodejs16.x'
     package:
-      artifact: common-libs.zip
+      artifact: common-layer.zip
