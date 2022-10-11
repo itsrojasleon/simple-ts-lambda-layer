@@ -10,7 +10,7 @@
     "prebuild": "rm -rf nodejs && rm -rf common-layer && tsc && mkdir nodejs && cp package.json nodejs && cd nodejs; npm install --prod && mkdir -p node_modules",
     "build": "cp -R common-layer nodejs/node_modules && cd nodejs/node_modules/common-layer; npm init -y",
     "postbuild": "zip -r common-layer.zip nodejs",
-    "deploy": "npm run build && serverless deploy",
+    "deploy": "serverless deploy",
     "remove": "serverless remove"
   },
   "keywords": [],
@@ -22,6 +22,7 @@
   "devDependencies": {
     "@types/aws-lambda": "^8.10.101",
     "serverless": "^3.7.4",
+    "serverless-plugin-scripts": "^1.0.2",
     "typescript": "^4.6.2"
   },
   "description": ""

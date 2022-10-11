@@ -4,6 +4,7 @@ specifiers:
   '@types/aws-lambda': ^8.10.101
   randomstring: ^1.2.2
   serverless: ^3.7.4
+  serverless-plugin-scripts: ^1.0.2
   typescript: ^4.6.2
 
 dependencies:
@@ -12,6 +13,7 @@ dependencies:
 devDependencies:
   '@types/aws-lambda': 8.10.101
   serverless: 3.21.0
+  serverless-plugin-scripts: 1.0.2
   typescript: 4.7.4
 
 packages:
@@ -2390,6 +2392,10 @@ packages:
     hasBin: true
     dependencies:
       lru-cache: 6.0.0
+    dev: true
+
+  /serverless-plugin-scripts/1.0.2:
+    resolution: {integrity: sha512-+OL9fFz5r6BXNHfpu9MDLehS/haC0fy/T3V5uJsTfLAnNsn+PzM6BmvefUfWG372hBT7piTbywB1Vl1+4LmI5Q==}
     dev: true
 
   /serverless/3.21.0:
