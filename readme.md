@@ -52,16 +52,11 @@ AWS_REGION=us-east-1
 AWS_ACCOUNT_ID=write_here
 ```
 
-- Deploy the lambda layer
+- Deploy services
 
 ```shell
-cd common-layer && pnpm run deploy
-```
-
-- Deploy the lambda function
-
-```shell
-cd service && pnpm run deploy
+# Root directory.
+npm run deploy
 ```
 
 And that's it. Super simple.
