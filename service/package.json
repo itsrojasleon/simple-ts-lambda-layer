@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "serverless offline start --config serverless.dev.yml",
+    "dev": "serverless offline start --verbose --config serverless.dev.yml",
     "test": "jest --watchAll",
     "test:ci": "jest",
     "deploy": "serverless deploy",
