@@ -25,6 +25,9 @@ custom:
       # - common-layer
       # We can exclude this package since it's installed locally in our project.
       - randomstring
+    watch:
+      pattern: ['./src', '../common-layer/src']
+      ignore: ['**/__tests__/**', '../**/__tests__/**']
 
 plugins:
   - serverless-esbuild
