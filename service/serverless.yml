@@ -7,7 +7,7 @@ provider:
   runtime: nodejs16.x
   stage: ${opt:stage, 'dev'}
   layers:
-    - arn:aws:lambda:${env:AWS_REGION}:${env:AWS_ACCOUNT_ID}:layer:common:latest
+    - arn:aws:lambda:${aws:region}:${aws:accountId}:layer:common:latest
 
 functions:
   hello:

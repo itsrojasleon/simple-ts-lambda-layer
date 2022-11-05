@@ -9,6 +9,7 @@ import {
 import randomstring from 'randomstring';
 
 export const handler: APIGatewayProxyHandler = async () => {
+  console.log(process.env.HELLO);
   return lambdaResponse(StatusCodes.StatusOK, {
     programmingLanguages,
     randomstring: randomstring.generate()
